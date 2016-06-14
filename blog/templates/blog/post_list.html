@@ -8,5 +8,19 @@
         </div>
         
         <p>This site was created as part of a technical interview for Ag for Hire!</p>
+    
+        <div>
+            <p>
+                {% for post in posts %}
+                <div>
+                <div>
+                    <h1>{{ post.title }}</h1>
+                    <p>{{ post.text|linebreaks }}</p>
+                    <p>published: {{ post.published_date }}</p>
+                </div>    
+                </div>
+                {% endfor %}
+            <p/>
+        </div>
     </body>
 </html>
