@@ -37,10 +37,19 @@
     
 }
 
+.edit
+{
+    background-color: rgba(70, 167, 69, .85);  
+    border-color: rgba(255, 255, 255, 0.6);
+    border-style: solid;
+}
+
 h1 
 {
-    color: #134413;
-    font-family: 'Droid+Serif';
+    color: #ffffff;
+    font-family: 'Droid+Serif';  
+    font-size: 30pt;
+    font-weight: bold;
 }
 
 .page-header 
