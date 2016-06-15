@@ -6,27 +6,54 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
-    <body>
-        <div>
-            <h1>Welcome to Peter's Site:</h1>
-        </div>
-        
-        <p>This site was created as part of a technical interview for Ag for Hire!</p>
     
-        <div>
-            <p>
-                {% for post in posts %}
-                <div>
-                <div>
-                    <h1>{{ post.title }}</h1>
-                    <p>{{ post.text|linebreaks }}</p>
-                    <p>published: {{ post.published_date }}</p>
-                </div>    
-                </div>
+    <body class = "body">
+    <div class = "opacity">
+    
+        <div class="page-header">
+        
+            <h1>Welcome to Peter's Site: 
+                <a href="http://www.agforhire.com">
+                    <img border="0" src="\static\images\AgforHire.png" alt="Ag for Hire" style="float:right;width:244px;height:99px;">
+                </a>
+                
+            </h1>
+            
+            <h2>
+                This site was created as part of a technical interview for Ag for Hire.
+            </h2>
+
+       </div>
+        
+            {% for post in posts %}
+            
+                <div class="post">
+                
+                
+                    <h1>
+                        {{ post.title }}:
+                    </h1>
+                    
+                    <h2>
+                        {{ post.text|linebreaks }}
+                    </h2>
+                    
+                    <h3>
+                        published: {{ post.published_date }}
+                    </h3>
+                    
+                </div>   
+
+                <div class = "divider">
+                </div>                
+                
                 {% endfor %}
-            <p/>
-        </div>
+            
+        
+    </div>  
+  
     </body>
 </html>
