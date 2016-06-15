@@ -1,7 +1,12 @@
 {% extends 'blog/base.html' %}
 
+
 {% block content %}
-    <div class="post">                
+    <div class="post">  
+    <a class="btn pull-right" href="{% url 'post_edit' pk=post.pk %}" align = "right">
+        <span class="glyphicon glyphicon-pencil glyphicon-small">
+        </span>
+    </a>    
             <h1>
                 {{ post.title }}:
             </h1>
@@ -15,6 +20,7 @@
                     published: {{ post.published_date }}
                 </h3>
             {% endif %}
+        
         </div>
     </div>
 {% endblock %}

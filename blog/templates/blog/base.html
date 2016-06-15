@@ -10,17 +10,35 @@
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     
-
     <body class = "body">
-    <div class = "opacity">
+    <div class = "opacity">   
     
         <div class="page-header">
-        
+            <a href="{% url 'post_new' %}" class="plus">
+                <span class = "pull-right">
+                <span class="glyphicon glyphicon-plus top">
+                </span>
+                </span>
+            </a>
+            
+            <a href="/admin" class="wrench">
+                <span class = "pull-right">
+                <span class="glyphicon glyphicon-wrench top">
+                </span>
+                </span>
+            </a>
+            
+            <a href="/" class="home">
+                <span class = "pull-right">
+                <span class="glyphicon glyphicon-home top">
+                </span>
+                </span>
+            </a>
+            
             <h1>Welcome to Peter's Site: 
                 <a href="http://www.agforhire.com">
                     <img border="0" src="\static\images\AgforHire.png" alt="Ag for Hire" style="float:right;width:244px;height:99px;">
-                </a>
-                
+                </a>  
             </h1>
             
             <h2>
@@ -28,14 +46,15 @@
             </h2>
 
        </div>
-        
+       
+     
        <div class="container-fluid">
+       
        {% block content %}
        {% endblock %}
-       </div>
+     
+    </div>
           
-            
-        
     </div>  
   
     </body>
