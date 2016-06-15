@@ -1,0 +1,42 @@
+{% load staticfiles %}
+
+<html>
+    <head>
+        <title>Technical Interview</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    
+
+    <body class = "body">
+    <div class = "opacity">
+    
+        <div class="page-header">
+        
+            <h1>Welcome to Peter's Site: 
+                <a href="http://www.agforhire.com">
+                    <img border="0" src="\static\images\AgforHire.png" alt="Ag for Hire" style="float:right;width:244px;height:99px;">
+                </a>
+                
+            </h1>
+            
+            <h2>
+                This site was created as part of a technical interview for Ag for Hire.
+            </h2>
+
+       </div>
+        
+       <div class="container-fluid">
+       {% block content %}
+       {% endblock %}
+       </div>
+          
+            
+        
+    </div>  
+  
+    </body>
+</html>

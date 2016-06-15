@@ -30,6 +30,12 @@ h1
 
 }
 
+.link
+{
+   color:aqua;
+   text-decoration: none; 
+   background-color: none;
+}
 
 .page-header h1
 {
