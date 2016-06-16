@@ -7,8 +7,14 @@
             <a class="btn pull-right" href="{% url 'post_edit' pk=post.pk %}" align = "right">
                 <span class="glyphicon glyphicon-pencil glyphicon-small">
                 </span>
-            </a>    
+            </a>  
+            
+            <a class="btn pull-right" href="{% url 'post_remove' pk=post.pk %}" align = "right">
+                <span class="glyphicon glyphicon-trash glyphicon-small">
+                </span>
+            </a>              
         {% endif %}
+        
             <h1>
                 {{ post.title }}:
             </h1>
@@ -21,8 +27,10 @@
                 <h3>
                     published: {{ post.published_date }}
                 </h3>
+            {% else %}
+                <a class="btn btn-default pull-right" href="{% url 'blog.views.post_publish' pk=post.pk %}">Publish
+                </a>
             {% endif %}
         
-        </div>
     </div>
 {% endblock %}

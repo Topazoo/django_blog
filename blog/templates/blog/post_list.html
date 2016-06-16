@@ -11,6 +11,11 @@
                     <span class="glyphicon glyphicon-pencil glyphicon-small">
                     </span>
                 </a> 
+                
+                <a class="btn pull-right" href="{% url 'post_remove' pk=post.pk %}" align = "right">
+                    <span class="glyphicon glyphicon-trash glyphicon-small">
+                    </span>
+                </a>  
             {% endif %}
         
             <a href="{% url 'post_detail' pk=post.pk %}" style="text-decoration: none">  
@@ -29,6 +34,8 @@
                 <h3>
                     published: {{ post.published_date }}
                 </h3>
+             {% else %}
+                <a class="btn btn-default" href="{% url 'blog.views.post_publish' pk=post.pk %}">Publish</a>
             {% endif %}
             
         </div>   
