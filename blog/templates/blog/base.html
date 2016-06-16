@@ -23,6 +23,15 @@
                 </a>
             {% endif %}
             
+            {% if user.is_authenticated %}
+                <a href="{% url 'post_draft_list' %}" class="draft">
+                    <span class = "pull-right">
+                    <span class="glyphicon glyphicon-book top">
+                    </span>
+                    </span>
+                </a>
+            {% endif %}
+            
             
             <a href="/admin" class="wrench">
                 <span class = "pull-right">
