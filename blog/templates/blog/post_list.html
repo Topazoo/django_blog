@@ -5,10 +5,14 @@
     {% for post in posts %}
     
         <div class="post">
-        <a class="btn pull-right" href="{% url 'post_edit' pk=post.pk %}" align = "right">
-        <span class="glyphicon glyphicon-pencil glyphicon-small">
-        </span>
-        </a> 
+        
+            {% if user.is_authenticated %}
+                <a class="btn pull-right" href="{% url 'post_edit' pk=post.pk %}" align = "right">
+                    <span class="glyphicon glyphicon-pencil glyphicon-small">
+                    </span>
+                </a> 
+            {% endif %}
+        
             <a href="{% url 'post_detail' pk=post.pk %}" style="text-decoration: none">  
             <div class="link">            
             <h1>
