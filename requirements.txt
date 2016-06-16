@@ -1,11 +1,8 @@
 chardet==2.2.1
 Django==1.9.7
 git-review==1.25.0
-pip==8.1.2
 requests==2.7.0
-setuptools==15.2
 simplejson==3.6.5
 six==1.9.0
 stgit===0.17.1-dirty
 urllib3==1.10.4
-wheel==0.29.0
